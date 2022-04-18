@@ -44,13 +44,10 @@ const Counter: FC<ICounter> = ({ counterDispatchHandler, counterState }) => {
   const [alert, setAlert] = useState(counterStateCondition);
 
   useEffect(() => {
-    console.log("1");
     setAlert(false);
     if (counterStateCondition) {
-      console.log("2");
       setAlert(true);
       const timer = setTimeout(() => {
-        console.log("3");
         setAlert(false);
       }, 5000);
       return () => {

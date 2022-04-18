@@ -11,7 +11,7 @@ import { ICountState } from "../../../../utils/hooks/useCounter";
 const BottomSectionWrapper = styled.div`
   display: flex;
   flex-direction: row;
-  margin-top: -136px;
+  margin-top: -144px;
 
   & > div {
     width: 50%;

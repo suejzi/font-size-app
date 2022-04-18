@@ -13,7 +13,7 @@ const SideBoxWrapper = styled.div`
   display: flex;
   flex-direction: column;
   border: 2px solid rgba(0, 0, 0, 0.1);
-  padding: 0 10px 10px 10px;
+  padding: 10px 10px 0 10px;
   margin-bottom: 10px;
 
   &:last-child {
@@ -23,8 +23,10 @@ const SideBoxWrapper = styled.div`
   @media only screen and (max-width: 992px) {
     flex-direction: row;
     justify-content: space-between;
-    margin-bottom: unset;
-    padding: 10px;
+    margin-bottom: 2.5px;
+    align-items: center;
+    padding: 0 10px;
+    height: 44px;
   }
 `;
 
@@ -44,16 +46,17 @@ const DescriptionWrapper = styled.div`
     width: 60px;
     object-fit: cover;
     margin-right: 10px;
+    padding-bottom: 10px;
   }
 
   p {
-    overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-line-clamp: 3;
     line-clamp: 3;
     -webkit-box-orient: vertical;
-    max-height: 80px;
+    overflow: hidden;
+    height: 88px;
   }
 
   @media only screen and (max-width: 992px) {
@@ -70,20 +73,20 @@ const DescriptionWrapper = styled.div`
 `;
 
 const Title = styled.h3`
-  span {
-    height: 32px;
-    display: flex;
-    align-items: flex-end;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    -webkit-line-clamp: 1;
-    line-clamp: 1;
-    -webkit-box-orient: vertical;
-  }
+  overflow: hidden;
+  height: 25px;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  -webkit-box-orient: vertical;
+  padding-bottom: 5px;
 
   @media only screen and (max-width: 992px) {
-    height: initial;
-  } ;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
 `;
 
 export interface ISideBox {

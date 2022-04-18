@@ -1,4 +1,4 @@
 export enum AppRoute {
-  Main = "/",
+  Home = "/",
   NotFound = "/not-found",
 }
